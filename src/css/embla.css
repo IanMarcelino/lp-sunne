@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* RESET & VARIÁVEIS (mantido) */
+.embla {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  line-height: 1.15;
+  background-color: var(--background-site);
+  font-size: 62.5%;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.embla body {
+  background-color: var(--background-site);
+  color: var(--text-high-contrast);
+  font-size: 1.6rem;
+  line-height: 1.65;
+}
+
+/* ----- ESTILOS ESSENCIAIS DO CARROSSEL ----- */
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  gap: 1rem;
+}
+
+.embla__slide {
+  flex: 0 0 33.333%;
+  min-width: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.embla__slide__content {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.embla__slide__content img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+.embla__slide__content p {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.embla__slide__content a {
+  color: orange;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.embla__slide__content a:hover {
+  text-decoration: underline;
+}
+
+/* ----- NAVEGAÇÃO (SETAS) ----- */
+
+.embla__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.embla__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.embla__button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: orange;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.embla__button:hover {
+  transform: scale(1.1);
+}
+
+/* ----- DOTS (opcional - pode esconder se quiser) ----- */
+
+.embla__dots {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.embla__dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.embla__dot.is-selected {
+  background-color: orange;
+}
+
+/* ----- RESPONSIVO ----- */
+
+@media (max-width: 768px) {
+  .embla__slide {
+    flex: 0 0 90%;
+  }
+
+  .embla__buttons {
+    gap: 1rem;
+  }
+}
