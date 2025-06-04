@@ -155,21 +155,51 @@
    font-size: 16px;
  }
 
- .card icon-card-benefits {
-  
-   margin-bottom: 0px;
+ .icon-card-benefits svg {
+   width: 20px;
+   height: 40px;
  }
+
+ .icon-wrapper {                                   /* CIRCULO EXTERNO DOS ICONS (USANDO O MESMO PARA TODOS)*/
+   background-color: #e8f0ef;
+   /* cinza claro */
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .icon-wrapper>svg {
+   stroke: #0e3b34;
+   width: 24px;
+   height: 24px;
+ }
+
+  .icon-card-energy>svg {
+   width: 20px;
+   height: 40px;
+ }
+
+
 
  .card h3 {
    font-size: 18px;
-   margin-bottom: 50px;
-   width: 181.58px;
+   margin-bottom: 35px;
+   width: 250.58px;
    height: 23.41px;
+   padding-top: 5%;
  }
 
  .card p {
    font-size: 16px;
    color: #4b5563;
+ }
+
+ .card a {
+   font-size: 16px;
+   color: #ff6600;
  }
 
 
