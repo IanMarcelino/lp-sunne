@@ -6,7 +6,7 @@
    font-family: 'Inter', sans-serif;
  }
 
- body {
+ /* body {
    background-color: #f8fafc;
    color: #111;
  }
@@ -57,7 +57,7 @@
    font-size: 1rem;
    cursor: pointer;
    color: #103731;
- }
+ } */
 
  .hero {
    display: flex;
@@ -124,17 +124,23 @@
  .benefits {
    padding: 60px 40px;
    text-align: center;
+   background-color: #F5FAF9;
  }
 
  .benefits h2 {
-   font-size: 24px;
+   font-size: 30px;
    margin-bottom: 10px;
  }
 
- .benefits p {
-   color: #f97316;
-   margin-bottom: 40px;
+ .benefits strong {
+   color: #ff6600;
+   ;
+ }
 
+ .benefits p {
+   color: #FF7316;
+   margin-bottom: 40px;
+   font-size: 18px;
  }
 
  .cards {
@@ -160,7 +166,8 @@
    height: 40px;
  }
 
- .icon-wrapper {                                   /* CIRCULO EXTERNO DOS ICONS (USANDO O MESMO PARA TODOS)*/
+ .icon-wrapper {
+   /* CIRCULO EXTERNO DOS ICONS (USANDO O MESMO PARA TODOS)*/
    background-color: #e8f0ef;
    /* cinza claro */
    border-radius: 50%;
@@ -177,17 +184,21 @@
    height: 24px;
  }
 
-  .icon-card-energy>svg {
+ .icon-card-energy>svg {
+   width: 20px;
+   height: 40px;
+ }
+
+ .icon-card-money>svg {
    width: 20px;
    height: 40px;
  }
 
 
-
  .card h3 {
-   font-size: 18px;
+   font-size: 19px;
    margin-bottom: 35px;
-   width: 250.58px;
+   width: 290.58px;
    height: 23.41px;
    padding-top: 5%;
  }
@@ -195,13 +206,155 @@
  .card p {
    font-size: 16px;
    color: #4b5563;
+   padding-top: 5%;
  }
 
  .card a {
    font-size: 16px;
-   color: #ff6600;
+   color: #FF8800;
  }
 
+ .economize {
+   display: flex;
+   align-items: center;
+   background-color: #0e3b34;
+   color: white;
+   padding-left: 200px;
+   height: 500px;
+   flex-direction: row;
+   gap: 0px 0px;
+   row-gap: 0px;
+   column-gap: 0px;
+   padding-top: 90px;
+   padding-bottom: 90px;
+   padding-left: 0px;
+   padding-right: 0px;
+ }
+
+ .economize-left,
+ .economize-right {
+   width: 50%;
+ }
+
+ .economize-left {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-left: 200px;
+
+   h4 {
+     font-size: 2rem;
+     margin-bottom: 1.5rem;
+
+     p {
+       font-size: 24px;
+       margin: 0;
+       line-height: 1.0;
+       width: 602px;
+     }
+
+     strong {
+       color: #ff8800;
+     }
+   }
+
+   .title-economize {
+     font-family: Poppins, Sans-serif;
+     margin-bottom: 2rem;
+     font-size: 24px;
+     font-weight: 500;
+     line-height: 30px;
+     line-height: 1.0;
+     width: 602px;
+
+   }
+
+   .btn-secundary {
+     background-color: #ff6600;
+     color: #fff;
+     padding: 15px 30px;
+     border: none;
+     border-radius: 40px;
+     font-weight: 600;
+     cursor: pointer;
+     font-size: 0.93rem;
+
+     &:hover {
+       opacity: 0.85;
+     }
+   }
+ }
+
+ .economize-right {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .background-zero {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-image: url('/caminho/para/sua-imagem.png');
+     background-size: cover;
+     background-position: center;
+     opacity: 0.3;
+   }
+
+   .texto-superior {
+     width: 100%;
+     max-width: 482px; 
+     padding: 1rem; 
+     position: relative;
+     text-align: center;
+     z-index: 1;
+
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+   }
+
+   .title-economia {
+     font-family: Poppins, Sans-serif;
+     font-size: 90px;
+     font-weight: 600px;
+     line-height: 67px;
+     width: 303.44px;
+     height: 60px;
+     font-size: 60px;
+     padding-right: 200;
+   }
+
+   .title-custo {
+     font-family: Poppins, Sans-serif;
+     font-size: 60px;
+     font-weight: 600px;
+     line-height: 80px;
+   }
+ }
+
+ /* .economize h4 {
+   USANDO O economize H4 para estilizar todos os 3 textos (investimento, obra, dor) 
+   font-family: Poppins, Sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   margin-bottom: 16px;
+ }
+
+ H4 strong {
+   color: #FF8800;
+ }
+
+ .title-economize {
+   font-family: Poppins, Sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 30px;
+   color: #fff;
+ } */
 
 
  @media (max-width: 768px) {
