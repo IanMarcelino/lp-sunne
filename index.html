@@ -11,7 +11,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -343,20 +343,25 @@
       <footer class="footer">
         <div class="footer-top">
           <div class="footer-col logo-social">
-            <!-- Bloco do Instagram -->
+            <!-- Instagram -->
             <div class="social-item">
-              <img src="images/Instagram_icon.png" alt="Instagram" class="footer-logo" />
-              <p>@soluti.solar</p>
+              <a href="https://www.instagram.com/soluti.solar" target="_blank" aria-label="Instagram Soluti">
+                <img src="images/Instagram_icon.png" alt="Instagram" class="footer-logo" />
+              </a>
+              <span>@soluti.solar</span>
             </div>
 
-            <!-- Bloco do WhatsApp -->
+            <!-- WhatsApp -->
             <div class="social-item">
-              <img src="images/WhatsApp_icon.png" alt="WhatsApp" class="footer-logo" />
-              <p>+55 (13)98218-3383</p>
+              <a href="https://wa.me/5513982183383" target="_blank" aria-label="WhatsApp Soluti">
+                <img src="images/WhatsApp_icon.png" alt="WhatsApp" class="footer-logo" />
+              </a>
+              <span>+55 (13)98218-3383</span>
             </div>
           </div>
+
           <div class="footer-col badge">
-            <img src="images/solutifooter2.png" alt="LGPD Compliant Badge" class="footer-logo-soluti" />
+            <img src="images/solutifooter2.png" alt="Logo da Soluti" class="footer-logo-soluti" />
           </div>
         </div>
 

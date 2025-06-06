@@ -633,16 +633,32 @@
  }
 
  .footer-logo {
-   height: 18px;
-   margin: 0;
-   /* remove o margin-bottom que empurra o texto */
-   padding-bottom: 1%;
+   height: 25px;
+   width: auto;
+   display: block;
  }
+
 
  hr {
    border: none;
    border-top: 1px solid #cbd5e1;
    margin: 20px 0;
+ }
+
+ .social-item {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   margin-bottom: 12px;
+ }
+.social-item span {
+  padding-bottom: 10px;
+ }
+ .social-item img {
+   height: 25px;
+   width: auto;
+   align-items: center;
+   margin: 0%;
  }
 
 
@@ -719,7 +735,7 @@
      padding: var(--padding-section-mobile);
    }
 
-   .social-item p{
-    margin: 0;
+   .social-item p {
+     margin: 0;
    }
  }
