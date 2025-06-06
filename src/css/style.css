@@ -718,4 +718,8 @@
    .footer {
      padding: var(--padding-section-mobile);
    }
+
+   .social-item p{
+    margin: 0;
+   }
  }
