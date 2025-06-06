@@ -1,51 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* RESET & VARIÁVEIS (mantido) */
-.embla {
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-  line-height: 1.15;
-  background-color: var(--background-site);
-  font-size: 62.5%;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-}
-
+/* ----- RESET E CONFIGURAÇÃO GERAL ----- */
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-.embla body {
-  background-color: var(--background-site);
-  color: var(--text-high-contrast);
-  font-size: 1.6rem;
-  line-height: 1.65;
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  overflow-x: hidden;
 }
 
-/* ----- ESTILOS ESSENCIAIS DO CARROSSEL ----- */
+/* ----- EMBLA CARROSSEL CONTAINER PRINCIPAL ----- */
+.embla {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  box-sizing: border-box;
+  line-height: 1.15;
+  background-color: var(--background-site);
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
+/* ----- VIEWPORT LIMITADOR DE LARGURA ----- */
 .embla__viewport {
   overflow: hidden;
   width: 100%;
+  max-width: 1200px;
 }
 
-.embla__container {
-  display: flex;
-  gap: 1rem;
-}
-
-.embla__slide {
-  flex: 0 0 33.333%;
-  min-width: 0;
-  padding: 1rem;
+.embla__viewport-wrapper {
+  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
+/* ----- CONTAINER DOS SLIDES ----- */
+.embla__container {
+  display: flex;
+  gap: 0;
+  padding: 0;
+}
+
+/* ----- SLIDE INDIVIDUAL ----- */
+.embla__slide {
+  flex: 0 0 33.333%;
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  max-width: 100%;
+}
+
+/* ----- CONTEÚDO DO SLIDE ----- */
 .embla__slide__content {
   background-color: #fff;
   border: 1px solid #e0e0e0;
@@ -54,8 +70,12 @@
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   height: 100%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
+/* ----- CONTEÚDO DE TEXTO E IMAGEM NO SLIDE ----- */
 .embla__slide__content img {
   max-width: 100px;
   margin-bottom: 1rem;
@@ -77,64 +97,130 @@
   text-decoration: underline;
 }
 
-/* ----- NAVEGAÇÃO (SETAS) ----- */
-
-.embla__controls {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.embla__buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
+/* ----- BOTÕES DE NAVEGAÇÃO ----- */
 .embla__button {
   background: none;
   border: none;
-  font-size: 2rem;
-  color: orange;
+  font-size: 2.5rem;
+  color: #ff8800;
   cursor: pointer;
+  padding: 0;
   transition: transform 0.2s;
+  flex-shrink: 0;
 }
 
 .embla__button:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
-/* ----- DOTS (opcional - pode esconder se quiser) ----- */
+.embla__button--prev {
+  margin-right: 1rem;
+}
 
+.embla__button--next {
+  margin-left: 1rem;
+}
+
+/* ----- NAVEGAÇÃO DOTS (PONTOS) ----- */
 .embla__dots {
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  margin-top: 1rem;
 }
 
 .embla__dot {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   background-color: #d1d1d1;
   border-radius: 50%;
   cursor: pointer;
   border: none;
+  transition: transform 0.2s;
 }
 
+.embla__dot:hover {
+  transform: scale(1.2);
+}
+
+.embla__dot--selected,
 .embla__dot.is-selected {
   background-color: orange;
 }
 
-/* ----- RESPONSIVO ----- */
+/* ----- CARD PERSONALIZADO ----- */
+.custom-card {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
+.custom-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.custom-card p {
+  font-size: 1.0rem;
+  color: #333;
+  margin-top: 1.5rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.custom-card a:hover {
+  text-decoration: underline;
+}
+
+/* ----- RESPONSIVO PARA MOBILE ----- */
 @media (max-width: 768px) {
-  .embla__slide {
-    flex: 0 0 90%;
+  .embla {
+    font-size: inherit;
+    width: 100%;
+    overflow: hidden;
   }
 
-  .embla__buttons {
-    gap: 1rem;
+  .embla__slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .embla__container {
+    gap: 0;
+    padding: 0;
+  }
+
+  .embla__slide__content,
+  .custom-card {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .embla__button--prev,
+  .embla__button--next {
+    margin: 0;
+  }
+
+  .embla__dots {
+    margin-top: 1rem;
   }
 }

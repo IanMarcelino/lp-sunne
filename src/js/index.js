@@ -1,11 +1,25 @@
-import EmblaCarousel from 'embla-carousel'
+import { addPrevNextBtnsClickHandlers } from './EmblaCarouselArrowButtons.js'
+import { addDotBtnsAndClickHandlers } from './EmblaCarouselDotButton.js'
 
-const emblaNode = document.querySelector('.embla')
-const viewportNode = emblaNode.querySelector('.embla__viewport')
-const prevBtn = emblaNode.querySelector('.embla__button--prev')
-const nextBtn = emblaNode.querySelector('.embla__button--next')
+// Aguarda o DOM carregar
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona todos os carrosseis na página (ex: .embla, .embla-parceiros)
+  const carrosseis = document.querySelectorAll('[data-embla]')
 
-const embla = EmblaCarousel(viewportNode, { loop: true })
+  carrosseis.forEach((carrossel) => {
+    const viewportNode = carrossel.querySelector('[data-embla-viewport]')
+    const prevBtnNode = carrossel.querySelector('[data-embla-prev]')
+    const nextBtnNode = carrossel.querySelector('[data-embla-next]')
+    const dotsNode = carrossel.querySelector('[data-embla-dots]')
 
-prevBtn.addEventListener('click', () => embla.scrollPrev())
-nextBtn.addEventListener('click', () => embla.scrollNext())
+    const emblaApi = window.EmblaCarousel(viewportNode, { loop: true })
+
+    if (prevBtnNode && nextBtnNode) {
+      addPrevNextBtnsClickHandlers(emblaApi, prevBtnNode, nextBtnNode)
+    }
+
+    if (dotsNode) {
+      addDotBtnsAndClickHandlers(emblaApi, dotsNode)
+    }
+  })
+})

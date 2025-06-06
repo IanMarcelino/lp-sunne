@@ -5,40 +5,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sunne - Energia Sustentável</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '556517590328811');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=556517590328811&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="stylesheet" href="./src/css/embla.css" />
+  <link rel="stylesheet" href="./src/css/parceiros.css" />
 </head>
 
 <body>
   <main>
-    <!-- <header class="header">
-      
-      <img class = "myimg" src="images\4.png" alt="Logo Sunne" />
-      <nav class="header-nav">
-        <a href="#">Gestão</a>
-        <a href="#">Vendas</a>
-        <a href="#">Comunidade</a>
-        <a href="#">Energia</a>
-        <a href="#">Cadastrar Usinas</a>
-        <a href="#">Blog</a>
-        <button class="search-icon" aria-label="Buscar">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="search-icon-svg">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-          </svg>
-        </button>
-        <a href="#" class="login-link">Login</a>
-        <button class="btn-primary">Quero economizar</button>
-      </nav>
-    </header> -->
     <section class="hero">
       <div class="hero-text">
         <h1>Economize na conta de energia da sua casa ou do negócio sem investimentos</h1>
-        <p>Com o serviço da Sunne você tem acesso à energia limpa e renovável, sem burocracias e adesão 100% digital.
+        <p>Com o serviço da Soluti você tem acesso à energia limpa e renovável, sem burocracias e adesão 100% digital.
         </p>
         <div>
-          <button class="btn-primary">Quero economizar</button>
+          <a href="https://sunne.economia.sunne.com.br/antoniomateuspaulasilva8qp" target="_blank" class="btn-primary">
+            Quero economizar
+          </a>
         </div>
       </div>
       <div class="container">
@@ -47,11 +50,10 @@
     </section>
 
     <section class="benefits">
-      <h2>Agora você pode ter energia <strong>Sunne</strong></h2>
+      <h2>Agora você pode ter energia <strong>Soluti</strong></h2>
       <p>Com nosso serviço, você aproveita vantagens como:</p>
 
       <div class="cards">
-
         <div class="card">
           <div class="icon-card-money">
             <div class="icon-wrapper">
@@ -60,11 +62,7 @@
                 <circle cx="7" cy="7" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none" />
                 <circle cx="17" cy="17" r="1.5" stroke="currentColor" stroke-width="1.5" fill="none" />
               </svg>
-
-
-
             </div>
-
           </div>
           <h3>Economize na sua conta de luz</h3>
           <p>Desconto garantido de até 20% na fatura de energia.</p>
@@ -74,11 +72,10 @@
           <div class="icon-card-energy">
             <div class="icon-wrapper">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
+                stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
               </svg>
-
             </div>
           </div>
           <h3>Energia limpa e sustentável</h3>
@@ -94,52 +91,284 @@
               </svg>
             </div>
           </div>
-          <h3>
-            Adesão 100% digital
-          </h3>
-          <p>A Sunne não tem burocracia! <a href="#">Contrate agora mesmo.</a></p>
+          <h3>Adesão 100% digital</h3>
+          <p>A Soluti não tem burocracia! <a href="#">Contrate agora mesmo.</a></p>
         </div>
       </div>
     </section>
 
     <section class="economize">
-      <div class=" economize-left">
-        <h4>
-          <p class="text-investimento"><strong>ZERO</strong> investimento<br></p>
-          <p class="text-obras"><strong>ZERO</strong> obras <br></p>
-          <p class="text-dor"><strong>ZERO</strong> dor de cabeça <br></p>
-        </h4>
-        <p class="title-economize">
-          Com a Sunne você economiza na conta de energia e consegue investir na sua casa ou no seu negócio!
-        </p>
-        <div class="btn-economize">
-          <button class="btn-secundary">Quero economizar</button>
+      <div class="container-economize-central">
+        <div class="economize-left">
+          <span class="text-investimento"><strong>ZERO</strong> investimento<br></span>
+          <span class="text-obras"><strong>ZERO</strong> obras <br></span>
+          <span class="text-dor"><strong>ZERO</strong> dor de cabeça <br></span>
+          <p class="title-economize">
+            Com a Soluti você economiza na conta de energia e consegue investir na sua casa ou no seu negócio!
+          </p>
+          <div class="btn-economize">
+            <a href="https://sunne.economia.sunne.com.br/antoniomateuspaulasilva8qp" target="_blank"
+              class="btn-primary">
+              Quero economizar
+            </a>
+          </div>
         </div>
+
       </div>
+
 
       <div class="economize-right">
-        <div class="background-zero"></div>
-        <div class="texto-superior">
-          <h2 class="title-economia">Economia</h2>
-          <h1 class="title-custo">Sem custo</h1>
+        <div class="economize-bg-wrapper">
+          <div class="background-zero"></div>
+          <div class="texto-superior">
+            <h2 class="title-economia">Economia</h2>
+            <h1 class="title-custo">Sem custo</h1>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="media-sunne">
-      <div>
-        <h4 class=" media-sunne-title">
-          Sunne na mídia
-        </h4>
-        <p class>
-          Saibam o que falam da gente:
-        </p>
+    <section class="midia-sunne">
+      <div class="container-centralizado-midia">
+        <div class="container-conteudo-midia">
+          <div class="limitar-container-conteudo">
+            <div class="titulo-midia">
+              <h2>Soluti na mídia</h2>
+              <p>Saiba o que falam da gente!</p>
+            </div>
+
+            <div class="embla" data-embla>
+              <!-- Botão anterior -->
+              <button class="embla__button embla__button--prev" type="button" data-embla-prev>&#x2039;</button>
+
+              <!-- Viewport + Container + Dots -->
+              <div class="embla__viewport-wrapper">
+                <div class="embla__viewport" data-embla-viewport>
+                  <div class="embla__container">
+                    <!-- Slide 1 -->
+                    <div class="embla__slide">
+                      <div class="custom-card">
+                        <img src="images/midiaLOGO-CICLOVIVO-MENU-HOME-DESKTOP-1.png" alt="CicloVivo"
+                          class="card-logo" />
+                        <p>As 10 startups que estão trazendo impacto positivo para o Brasil.</p>
+                      </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="embla__slide">
+                      <div class="custom-card">
+                        <img src="images/midiaVector.png" alt="Vector" class="card-logo" />
+                        <p> Brasil tem 343 startups de ESG, mostra relatório da ACE.</p>
+                      </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="embla__slide">
+                      <div class="custom-card">
+                        <img src="images/midialogodarkretina-1.png" alt="Ciclovivo" class="card-logo" />
+                        <p>Soluti aporta grande valor em startup de energia renovável.</p>
+                      </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="embla__slide">
+                      <div class="custom-card">
+                        <img src="images/midiaGroup-36.png" alt="Valor Econômico" class="card-logo" />
+                        <p> No Ceará, Soluti busca seu lugar ao sol com oferta de energias renováveis.</p>
+                      </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="embla__slide">
+                      <div class="custom-card">
+                        <img src="images/midiaLOGO-CICLOVIVO-MENU-HOME-DESKTOP-1.png" alt="Estadão" class="card-logo" />
+                        <p>As 10 startups que estão trazendo impacto positivo para o Brasil.</p>
+                      </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="embla__slide">
+                      <div class="custom-card">
+                        <img src="images/midiaVector.png" alt="UOL" class="card-logo" />
+                        <p>Brasil tem 343 startups de ESG, mostra relatório da ACE.</p>
+                      </div>
+                    </div>
 
 
+                  </div>
+                </div>
+
+                <!-- Bolinhas -->
+                <div class="embla__dots" data-embla-dots></div>
+              </div>
+
+              <!-- Botão próximo -->
+              <button class="embla__button embla__button--next" type="button" data-embla-next>&#x203a;</button>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
 
+    <section class="assinatura-energia">
+      <div class="container-assinatura-energia">
+        <h2>Como a energia por assinatura funciona?</h2>
+        <p>É bem simples!</p>
+
+        <div class="cards-steps">
+          <div class="card-step">
+            <div class="step-icon">
+              <img src="images/vento.png" alt="Ícone usinas renováveis" />
+            </div>
+            <h3>1. Usinas renováveis</h3>
+            <p>
+              Temos diversas usinas geradoras sob gestão, prontas para enviar energia
+              para sua casa ou seu negócio.
+            </p>
+          </div>
+
+          <div class="card-step">
+            <div class="step-icon">
+              <img src="images/rem.png" alt="Ícone melhor oferta" />
+            </div>
+            <h3>2. Melhor oferta para você</h3>
+            <p>
+              Temos parcerias com todos os produtores de energia renovável do seu estado
+              e iremos trazer a melhor oportunidade de economia disponível para você.
+            </p>
+          </div>
+
+          <div class="card-step">
+            <div class="step-icon">
+              <img src="images/predio.png" alt="Ícone energia limpa" />
+            </div>
+            <h3>3. Você com energia limpa e sempre mais barata</h3>
+            <p>
+              Ao invés de receber energia da sua concessionária, agora você receberá energia
+              de usinas parceiras da Soluti, que é limpa e mais barata!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="parceiros">
+      <div class="container-parceiros">
+        <h2 class="parceiros-titulo">Empresas que confiam em nossas soluções</h2>
+
+        <div class="embla" data-embla>
+          <button class="embla__button embla__button--prev" data-embla-prev>&#x2039;</button>
+
+          <div class="embla__viewport" data-embla-viewport>
+            <div class="embla__container">
+              <div class="embla__slide">
+                <img src="images/bobs-logo-01.webp" alt="Grupo Hiper Farma" class="logo-cliente" />
+              </div>
+              <div class="embla__slide">
+                <img src="images/regina-01.webp" alt="Granja Regina" class="logo-cliente" />
+              </div>
+              <div class="embla__slide">
+                <img src="images/raizen-01.webp" alt="Raizen" class="logo-cliente" />
+              </div>
+              <div class="embla__slide">
+                <img src="images/bebelu-01.webp" alt="Bebelu" class="logo-cliente" />
+              </div>
+              <div class="embla__slide">
+                <img src="images/Logo_Qair-01.webp" alt="Qair" class="logo-cliente" />
+              </div>
+              <div class="embla__slide">
+                <img src="images/logo_alloha_positivo-01.webp" alt="Alloha" class="logo-cliente" />
+              </div>
+              <div class="embla__slide">
+                <img src="images/hiper-farma-01.webp" alt="HiperFarma" class="logo-cliente" />
+              </div>
+            </div>
+          </div>
+
+          <button class="embla__button embla__button--next" data-embla-next>&#x203a;</button>
+        </div>
+
+        <div class="embla__dots" data-embla-dots></div>
+      </div>
+    </section>
+
+    <section class="feedbacks">
+      <div class="feedbacks-container">
+        <h2 class="feedbacks-title">O que dizem os nossos clientes?</h2>
+
+        <div class="feedbacks-grid">
+          <!-- Card 1 -->
+          <div class="feedback-card">
+            <p>Há mais de três anos, a Soluti presta serviços de excelência em nossas usinas de geração distribuída no
+              Ceará e Maranhão, captando consumidores e gerenciando a operação comercial. A plataforma da Soluti nos
+              proporciona transparência e eficiência. Confiamos plenamente na atuação deles, baseada na experiência
+              positiva até o momento.</p>
+            <div class="feedback-author">
+              <img src="images/foto-daniel-zechinatto-300x300.webp" alt="Daniel" />
+              <div>
+                <strong>Daniel Zechinatto</strong>
+                <span>Coordenador Comercial da Eneva</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feedback-card">
+            <p>Sou fã do sistema de vocês desde o primeiro dia que eu vi. Acho que é o mais completo que a gente tem no
+              Brasil. Eu pesquisei e fui em várias empresas de software, uma a uma, fiz um benchmarking... para tomar a
+              decisão mais assertiva.</p>
+            <div class="feedback-author">
+              <img src="images/hewerton-martins-01-300x300.webp" alt="Hewerton" />
+              <div>
+                <strong>Hewerton Martins</strong>
+                <span>Fundador Presidente Movimento Solar Livre</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feedback-card">
+            <p>Trabalho com a Soluti há 3 anos e temos diversos clientes em comum. Já montei associações cooperativas e
+              consórcios para diversos grupos geradores, e a grande maioria deles é gerida pela Soluti, sempre mantendo
+              um relacionamento muito efetivo, de qualidade e com boa entrega de valor.</p>
+            <div class="feedback-author">
+              <img src="images/bernardo-300x300.webp" alt="Bernardo" />
+              <div>
+                <strong>Bernardo Santana</strong>
+                <span>Sócio na BVS ENERGIAS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-col logo-social">
+            <!-- Bloco do Instagram -->
+            <div class="social-item">
+              <img src="images/Instagram_icon.png" alt="Instagram" class="footer-logo" />
+              <p>@soluti.solar</p>
+            </div>
+
+            <!-- Bloco do WhatsApp -->
+            <div class="social-item">
+              <img src="images/WhatsApp_icon.png" alt="WhatsApp" class="footer-logo" />
+              <p>+55 (13)98218-3383</p>
+            </div>
+          </div>
+          <div class="footer-col badge">
+            <img src="images/Soluti-Logo1.png" alt="LGPD Compliant Badge" />
+          </div>
+        </div>
+
+        <hr />
+        <p class="footer-copy">Copyright © 2025 Soluti Brasil</p>
+      </footer>
+    </section>
+
+
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js"></script>
+  <script type="module" src="./src/js/index.js"></script>
 </body>
 
 </html>
