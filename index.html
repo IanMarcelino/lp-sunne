@@ -20,11 +20,12 @@
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '556517590328811');
-    fbq('track', 'PageView');
+    // fbq('track', 'PageView'); ← REMOVIDO
   </script>
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=556517590328811&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/style.css" />
   <link rel="stylesheet" href="./src/css/embla.css" />
@@ -374,6 +375,19 @@
   </main>
   <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js"></script>
   <script type="module" src="./src/js/index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const economizeButtons = document.querySelectorAll('a.btn-primary');
+
+      economizeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead'); // Envia o evento Lead para o Meta Pixel
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
